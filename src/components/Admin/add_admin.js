@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
 
 class AddAdmin extends Component {
 	state = {
 		email: '',
 		password: '',
+		confirmPassword: '',
 	};
 
 	onInputChange = e => {
@@ -20,11 +20,8 @@ class AddAdmin extends Component {
 
 	render() {
 		return (
-			// <div id="admin">
-			// 	<div className="hero-container">
 			<form>
 				<div className="form-group">
-					{/* <label htmlFor="exampleInputEmail1">Email address</label> */}
 					<input
 						type="email"
 						name="email"
@@ -35,7 +32,6 @@ class AddAdmin extends Component {
 					/>
 				</div>
 				<div className="form-group">
-					{/* <label htmlFor="exampleInputPassword1">Password</label> */}
 					<input
 						type="password"
 						name="password"
@@ -45,12 +41,20 @@ class AddAdmin extends Component {
 						onChange={this.onInputChange}
 					/>
 				</div>
+				<div className="form-group">
+					<input
+						type="password"
+						name="confirmPassword"
+						className="form-control"
+						id="confirmPassword"
+						placeholder="Confirm Password"
+						onChange={this.onInputChange}
+					/>
+				</div>
 				<button className="btn btn-primary" onClick={this.handleSubmit}>
 					Submit
 				</button>
 			</form>
-			// 	</div>
-			// </div>
 		);
 	}
 }
