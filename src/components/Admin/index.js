@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 
 import List from './list';
 import AddAdmin from './add_admin';
